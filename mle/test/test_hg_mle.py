@@ -1,10 +1,8 @@
 """
 test_hg_mle.py
 
-Author: Tomohide Higuchi
+Author: thgch
 Created on 2020/05/14
-
-Copyright 2020
 
 """
 
