@@ -1,10 +1,8 @@
 """
 hg_mle.py
 
-Author: Tomohide Higuchi
+Author: thgch
 Created on 2020/05/14
-
-Copyright 2020
 
 """
 
@@ -64,20 +62,6 @@ class Normal1DMle(AbsMle):
 
     def __init__(self, series_samples=None):
         super().__init__('Normal-1D', 2, series_samples)
-
-    def log_likelihood(self, params):
-        samples = super().samples
-        n_samples = len(samples)
-        mean, stdv = params[0], params[1]
-        varn = stdv * stdv
-        res = -0.5 * n_samples * np.log(2.0 * pi * varn) - 0.5 * (np.power(samples - mean, 2)).sum() / varn
-        return res
-
-
-class Cev1DMle(AbsMle):
-
-    def __init__(self, series_samples=None):
-        super().__init__('CEV-1D', 2, series_samples)
 
     def log_likelihood(self, params):
         samples = super().samples

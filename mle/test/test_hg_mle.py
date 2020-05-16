@@ -1,16 +1,14 @@
 """
 test_hg_mle.py
 
-Author: Tomohide Higuchi
+Author: thgch
 Created on 2020/05/14
-
-Copyright 2020
 
 """
 
 import unittest
 import numpy as np
-import hg_mle as testee
+from .. import hg_mle as testee
 
 
 class TestMle(unittest.TestCase):
